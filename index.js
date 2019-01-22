@@ -40,7 +40,7 @@ bot.on("message", async message => {
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
-  
+
   if(message.content === "aha"){
     message.channel.send("To brzydko o Asi :smile:")
   }
@@ -183,6 +183,29 @@ bot.on("message", async message => {
     return message.channel.send("No cześć!");
   }
 
+  const serverStats = {
+    guildID: "",
+    totalUsersID: "537255818089725972",
+    memberCountID: "537255959010082817",
+    botCountID: "537255892152877059"
+  };
+
+});
+
+client.on("guildMemberAdd", member => {
+  if (member.guild.id !== serverStats.guildID) return;
+  client.channels.get(serverStats.totalUsersID).setName(`Wszyscy użytkownicy:${member.guild.memberCount}`) //Wszyscy
+  client.channels.get(serverStats.memberCountID).setName(`Uzytkownicy: ${member.guild.members.filter(m => !m.user.bot).size)}`); //Użytkownicy, bez botów
+  client.channels.get(serverStats.botCountID).setName(`Boty: ${members.filter(m => m.user.bot).size}`); //Boty, bez użytkowników
+
+});
+
+client.on("guildMemberRemove", member => {
+  if (member.guild.id !== serverStats.guildID) return;
+  client.channels.get(serverStats.totalUsersID).setName(`Wszyscy użytkownicy:${member.guild.memberCount}`) //Wszyscy
+  client.channels.get(serverStats.memberCountID).setName(`Uzytkownicy: ${member.guild.members.filter(m => !m.user.bot).size)}`); //Użytkownicy, bez botów
+  client.channels.get(serverStats.botCountID).setName(`Boty: ${members.filter(m => m.user.bot).size}`); //Boty, bez użytkowników
+  
 });
 
 bot.login(process.env.BOT_TOKEN)
