@@ -28,6 +28,7 @@ module.exports.run = async(bot, message, args) => {
   .addField("ab!moneta", "Rzucarz moneta, jak myślisz wyjdzie orzeł czy reszka?")
   .addField("ab!liczba", "Losuje randomową liczbe od 1 do 10")
   .addField("ab!przyszlosc", "Bot odpowie ci co się przytrafi w twojej przyszłości")
+  .addField("ab!ascii <tekst>", "Bot pisze napisaną przez ciebie wiadomość z code blocku, a reszte sam sprawdz :)")
   message.author.send(embed);
   return message.channel.send(`${message.author.username} wysłano liste komend na prywatną wiadomość`)
 }
