@@ -195,17 +195,17 @@ bot.on("message", async message => {
 client.on("guildMemberAdd", member => {
   if (member.guild.id !== serverStats.guildID) return;
   client.channels.get(serverStats.totalUsersID).setName(`Wszyscy użytkownicy:${member.guild.memberCount}`) //Wszyscy
-  client.channels.get(serverStats.memberCountID).setName(`Uzytkownicy: ${member.guild.members.filter(m => !m.user.bot).size)}`); //Użytkownicy, bez botów
+  client.channels.get(serverStats.memberCountID).setName(`Uzytkownicy: ${member.guild.members.filter(m => !m.user.bot).size}`); //Użytkownicy, bez botów
   client.channels.get(serverStats.botCountID).setName(`Boty: ${members.filter(m => m.user.bot).size}`); //Boty, bez użytkowników
 
 });
 
 client.on("guildMemberRemove", member => {
   if (member.guild.id !== serverStats.guildID) return;
-  client.channels.get(serverStats.totalUsersID).setName(`Wszyscy użytkownicy:${member.guild.memberCount}`) //Wszyscy
-  client.channels.get(serverStats.memberCountID).setName(`Uzytkownicy: ${member.guild.members.filter(m => !m.user.bot).size)}`); //Użytkownicy, bez botów
+  client.channels.get(serverStats.totalUsersID).setName(`Wszyscy użytkownicy:${member.guild.memberCount}`); //Wszyscy
+  client.channels.get(serverStats.memberCountID).setName(`Uzytkownicy: ${member.guild.members.filter(m => !m.user.bot).size}`); //Użytkownicy, bez botów
   client.channels.get(serverStats.botCountID).setName(`Boty: ${members.filter(m => m.user.bot).size}`); //Boty, bez użytkowników
-  
+
 });
 
 bot.login(process.env.BOT_TOKEN)
