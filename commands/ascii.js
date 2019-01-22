@@ -8,6 +8,10 @@ module.exports.run = async(bot, message, args) => {
     message.channel.send(rendered, {
       code: "md"
     });
-    
+
   });
+}
+
+module.exports.help = {
+  name: "ascii"
 }
