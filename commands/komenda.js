@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async(bot, message, args) => {
+module.exports.run = async(bot, message, args, if) => {
 	let embed = new Discord.RichEmbed()
 	.setDescription("Lista")
 	.addField("1. Komenda")
