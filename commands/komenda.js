@@ -7,10 +7,10 @@ module.exports.run = async(bot, message, args) => {
 	.addField("2. Cosiek")
 	message.channel.send(embed);
 	if(message.content === "1") {
-		message.channel.send("Komenda")		
+		return message.channel.send("Komenda")
 	}
 	if(message.content === "2") {
-		message.channel.send("Cosiek")		
+		return message.channel.send("Cosiek")
 	}
 }
 
