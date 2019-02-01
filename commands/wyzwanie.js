@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
   let osoba = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   let powod = args.join(" ")
   .addField("Wyzwanie dla:", osoba)
-  .addField("Treść", powod)
+  .addField("Treść", powod else("Brak treści wyzwania"))
   message.channel.send(embed);
 }
 
