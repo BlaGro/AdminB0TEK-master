@@ -23,6 +23,23 @@ fs.readdir("./commands/", (err, files) => {
 
 });
 
+bot.on("channelCreate", async channel => {
+
+  console.log(`${channel} został stworzony`);
+
+  let kanal = channel.guild.channels.find(`name`, "logs");
+  kanal.send(`${channel} został stworzony`);
+});
+
+bot.on("channelDelete", async channel => {
+
+  console.log(`${channel} został usunięty`);
+
+  let channel = channel.guild.channels.find(`name`, "logs");
+  channel.send(`${channel} został stworzony`);
+  
+});
+
 bot.on("ready", async () => {
   console.log(`${bot.user.username} jest online!`);
 
@@ -182,7 +199,7 @@ bot.on("message", async message => {
   if(cmd === `${prefix}witam`){
     return message.channel.send("No cześć!");
   }
-  
+
 });
 
 bot.login(process.env.BOT_TOKEN)
