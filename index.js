@@ -31,6 +31,18 @@ bot.on("channelCreate", async channel => {
   kanal.send(`${channel.name} został stworzony`);
 });
 
+bot.on("messageUpdate", async message => {
+
+  console.log(`**Autor:** ${message.author.username}\n**Stara wiadomosc:** ${oldMessage}\n**Nowa wiadomosc:** ${newMessage}`);
+
+  let embed = new Discord.RichEmbed();
+  let odpkanal = channel.guild.channels.find(`name`, "logs");
+  .addField("Autor" + message.author.username);
+  .addField("Stara wiadomość", oldMessage);
+  .addField("Nowa wiadomość", newMessage);
+  odpkanal.send(embed);
+});
+
 bot.on("channelDelete", async channel => {
 
   console.log(`${channel.name} został usunięty`);
