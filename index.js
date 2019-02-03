@@ -31,13 +31,22 @@ bot.on("channelCreate", async channel => {
   kanal.send(`${channel.name} został stworzony`);
 });
 
-bot.on("messageUpdate", async message => {
+bot.on("roleDelete", async role => {
 
-  console.log(`**Autor:** ${message.author.username}\n**Stara wiadomosc:** ${oldMessage}\n**Nowa wiadomosc:** ${newMessage}`);
+  console.log(`Usunięto role: ${role}`);
+
+  let kanal = channel.guild.channels.find(`name`, "logs");
+  kanal.send(`Usunięto role: ${role}`);
+
+});
+
+bot.on("roleCreate", async role => {
+
+  console.log(`Stworzono role: ${role}`);
 
 
   let odpkanal = channel.guild.channels.find(`name`, "logs");
-  odpkanal.send(`**Autor:** ${message.author.username}\n**Stara wiadomosc:** ${oldMessage}\n**Nowa wiadomosc:** ${newMessage}`);
+  odpkanal.send(`Stworzono role: ${role}`);
 });
 
 bot.on("channelDelete", async channel => {
