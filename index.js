@@ -35,9 +35,9 @@ bot.on("channelDelete", async channel => {
 
   console.log(`${channel} został usunięty`);
 
-  let channel = channel.guild.channels.find(`name`, "logs");
-  channel.send(`${channel} został stworzony`);
-  
+  let channel1 = channel.guild.channels.find(`name`, "logs");
+  channel1.send(`${channel} został stworzony`);
+
 });
 
 bot.on("ready", async () => {
