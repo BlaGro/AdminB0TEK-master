@@ -8,6 +8,7 @@ module.exports.run = async(bot, message, args) => {
   .addField("Informacyjne", "Wyświetla komendy Informacyjne")
   .addField("4FUN", "Wyświetla komendy 4FUN")
   if(args[0] == "Komendy") {
+    let embed = new Discord.RichEmbed()
     .addField(`${prefix}zapros`, "**Link do zaproszenia**")
   }
   message.author.send(embed);
