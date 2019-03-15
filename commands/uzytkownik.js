@@ -10,6 +10,7 @@ module.exports.run = async(bot, message, args) => {
   .addField("Czy jest botem", message.author.bot || "Nie wiadomo")
   .addField("TAG", message.author.tag)
   .addField("ID", message.author.id)
+  .addField(`Ostatnia wiadomość`, message.author.lastMessage)
   .addField("ID ostatnie wiadomości", message.author.lastMessageID)
   .addField("Discriminator", message.author.discriminator)
   .addField("Kanał DM", message.author.dmChannel || "Brak")
