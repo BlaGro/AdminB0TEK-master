@@ -30,7 +30,7 @@ bot.on("channelCreate", async channel => {
   let kanal = channel.guild.channels.find(`name`, "logs");
   kanal.send(`#${channel.name} został stworzony`);
 });
-bot.on("guildBanAdd", async ban => {
+bot.on("guildBanAdd", async guild => {
 
   let kanal = channel.guild.channels.find(`name`, "logs")
   let embed = new Discord.RichEmbed()
