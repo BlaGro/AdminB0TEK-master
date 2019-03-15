@@ -30,13 +30,13 @@ bot.on("channelCreate", async channel => {
   let kanal = channel.guild.channels.find(`name`, "logs");
   kanal.send(`#${channel.name} został stworzony`);
 });
-bot.on("guildBanAdd", async guild => {
+bot.on("emojiCreate", async emoji => {
 
   let kanal = channel.guild.channels.find(`name`, "logs")
   let embed = new Discord.RichEmbed()
-  .setDescription(`Ban!`)
-  .addField(`Zbanowano ${user} na serwerze ${server}`)
-  message.kanal.send(embed);
+  .setDescription(`Nowe emoji`)
+  .addField(`Dodano: ${emoji}`)
+  kanal.send(embed);
 });
 bot.on("guildMemberAdd", async member => {
 
