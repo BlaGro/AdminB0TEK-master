@@ -34,7 +34,7 @@ bot.on("guildMemberAdd", async member => {
 
   console.log(`${member} dolaczył na serwer`)
 
-  let kanal = channel.guild.channels.find(`name`, "▓╠-nowicjusze-╣▓")
+  let kanal = channel.guild.channels.find(`name`, "nowicjusze")
   let embed = new Discord.RichEmbed()
   .setDescription("Nowy użytkownik!")
   .addField(`Powitajmy nowego użytkownika`, `${member} witaj na ${message.guild.name}. Baw się dobrze!`)

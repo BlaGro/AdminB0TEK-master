@@ -11,6 +11,7 @@ module.exports.run = async(bot, message, args) => {
   .addField(`Z prefixem: RolePlay`, `akcja`)
   .addField(`Z prefixem: Administracyjne`, `clear\npoll`)
   .addField(`Z prefixem: Pomocne dla serwera`, `report\npropozycja`)
+  .addField(`Funkcje`, `**Powiadomienie o:**\nStworzeniu kanału(kanał logs potrzebny)\nUsunięciu kanału(kanał logs potrzebny)\nNowym użytkowniku(wymagany kanał nowicjusze)`)
   message.author.send(embed);
   return message.channel.send(`${message.author.username} wysłano liste komend na prywatną wiadomość`)
 }
