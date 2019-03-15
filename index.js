@@ -36,6 +36,7 @@ bot.on("guildBanAdd", async ban => {
   let embed = new Discord.RichEmbed()
   .setDescription(`Ban!`)
   .addField(`Zbanowano ${user} na serwerze ${server}`)
+  message.kanal.send(embed);
 });
 bot.on("guildMemberAdd", async member => {
 
