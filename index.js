@@ -28,7 +28,7 @@ bot.on("channelCreate", async channel => {
   console.log(`${channel.name} został stworzony`);
 
   let kanal = channel.guild.channels.find(`name`, "logs");
-  kanal.send(`${channel.name} został stworzony`);
+  kanal.send(`#${channel.name} został stworzony`);
 });
 bot.on("guildMemberAdd", async member => {
 
@@ -46,7 +46,7 @@ bot.on("channelDelete", async channel => {
   console.log(`${channel.name} został usunięty`);
 
   let channel1 = channel.guild.channels.find(`name`, "logs");
-  channel1.send(`${channel.name} został stworzony`);
+  channel1.send(`#${channel.name} został usunięty`);
 
 });
 
