@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
   .setDescription(`${message.author.username} oto lista komend`)
   .setColor("#26ff0")
   .addField("Bez prefixu", `Cześć\nxd\n...\njaki kozak\nlol\nlenny\naha\nty no nie wiem`)
-  .addField(`Z prefixem: Hazard`, `ruletka\mmoneta\n`)
+  .addField(`Z prefixem: Hazard`, `ruletka\nmoneta`)
   .addField(`Z prefixem: Info`, `ikona-serwera\nawatar\nserwer\nping\nzapros\nuzytkownik\ncreditsy`)
   .addField(`Z prefixem: 4FUN`, `ascii\n8ball\nliczba\nprzyszłosc\nbcb\nmoneta\npowiedz\nrzuc <nick> <powód>`)
   .addField(`Z prefixem: RolePlay`, `akcja`)
