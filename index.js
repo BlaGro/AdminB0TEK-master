@@ -117,7 +117,7 @@ bot.on("message", async message => {
     let embed = new Discord.RichEmbed()
     .setDescription("Dodaj mnie!")
     .setColor("#f74a4d")
-    .addField("Link", `${message.author.username} dodaj mnie tym linkiem > https://discordapp.com/api/oauth2/authorize?client_id=472057997380812801&permissions=0&scope=bot`)
+    .addField("Link", `${message.author.username} dodaj mnie tym [linkiem](https://discordapp.com/api/oauth2/authorize?client_id=472057997380812801&permissions=0&scope=bot)`)
     message.channel.send(embed);
   }
 
