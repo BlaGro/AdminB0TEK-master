@@ -11,7 +11,9 @@ module.exports.run = async(bot, message, args) => {
   if(!kanal) return message.channel.send(`Nie znaleziono kanału`)
 
   message.delete().catch(O_o=>{});
-  message.channel.send(emebd);
+  kanal.send(emebd);
+
+  return
 }
 
 module.exports.help = {
