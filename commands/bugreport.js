@@ -11,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
   if(!kanal) return message.channel.send(`Nie znaleziono kanału`)
 
   message.delete().catch(O_o=>{});
-  kanal.send(emebd);
+  kanal.send(embed);
 
   return
 }
