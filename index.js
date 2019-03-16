@@ -80,10 +80,6 @@ bot.on("message", async message => {
     message.channel.send("To brzydko o Asi :smile:")
   }
 
-  if(message.content === "Głosowanie"){
-    message.react("✅").then(message.react("❌"))
-  }
-
   if(cmd === "lenny"){
     return message.channel.send("( ͡° ͜ʖ ͡°)")
   }
