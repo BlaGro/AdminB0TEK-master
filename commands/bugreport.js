@@ -9,6 +9,7 @@ module.exports.run = async(bot, message, args) => {
   message.channel.send(embed);
 
   channel.guild.channels.find(`name`, "bug-report")
+  return message.channel.send(`Nie znaleziono kanału #bug-report`)
 }
 
 module.exports.help = {
