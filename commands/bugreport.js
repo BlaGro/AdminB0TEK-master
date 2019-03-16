@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
   let powod = args.join(" ")
   let embed = new Discord.RichEmbed()
   .setDescription(`Report Buga!`)
-  .addField(`Reportujący: ${message.author.mention}`)
+  .addField(`Reportujący: ${message.author.username}`)
   .addField(`Powód reportu`, powod)
   message.channel.send(embed);
 
