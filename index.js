@@ -30,11 +30,8 @@ bot.on("channelCreate", async channel => {
   let kanal = channel.guild.channels.find(`name`, "logs");
   kanal.send(`#${channel.name} został stworzony`);
 });
-<<<<<<< HEAD
+
 bot.on("emojiCreate", async emoji => {
-=======
-bot.on("guildBanAdd", async guild => {
->>>>>>> ffb67dc6e9535180da859d5053ad62dabf20466f
 
   let kanal = channel.guild.channels.find(`name`, "logs")
   let embed = new Discord.RichEmbed()

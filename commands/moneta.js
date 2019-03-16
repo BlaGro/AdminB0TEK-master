@@ -11,3 +11,5 @@ module.exports.run = async(bot, message, args) =>{
 module.exports.help = {
   name: "moneta"
 }
+
+//Don't troll github with GitHub
