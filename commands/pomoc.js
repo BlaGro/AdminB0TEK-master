@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
   .addField(`Z prefixem: 4FUN`, `ascii\n8ball\nliczba\nprzyszłosc\nbcb\nmoneta\npowiedz\nrzuc <nick> <powód>\nrozmowa\n!`)
   .addField(`Z prefixem: RolePlay`, `akcja`)
   .addField(`Z prefixem: Administracyjne`, `clear\npoll`)
-  .addField(`Z prefixem: Pomocne dla serwera`, `report(potrzebny kanał zgloszenia)\npropozycja(kanał propozycje potrzebny)\nbugreport(potrzebny kanał bug-report)`)
+  .addField(`Z prefixem: Pomocne dla serwera`, `report(potrzebny kanał zgloszenia)\npropozycja(kanał propozycje potrzebny)`)
   .addField(`Funkcje`, `**Powiadomienie o:**\nStworzeniu kanału(kanał logs potrzebny)\nUsunięciu kanału(kanał logs potrzebny)\nNowym użytkowniku(wymagany kanał nowicjusze)`)
   message.author.send(embed);
   return message.channel.send(`${message.author.username} wysłano liste komend na prywatną wiadomość`)
