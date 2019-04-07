@@ -11,8 +11,6 @@ module.exports.run = async(bot, message, args) => {
   else {
     message.channel.send(`Tak! Prawidłową liczbą jest ${liczba}`)
   }
-
-  return;
 }
 
 module.exports.help = {
