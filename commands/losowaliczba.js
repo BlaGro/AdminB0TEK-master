@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
   var liczba = Math.floor(Math.random() * (+max - +min) + +min)
   message.channel.send("Wylosowałem dla ciebie liczbe od **0** do **100**\nJaka to liczba?")
   if(message.content != liczba) {
-    message.message.channel.send(`Nie, to nie ta liczba, prawidłową liczbą jest ${liczba}`)
+    .message.channel.send(`Nie, to nie ta liczba, prawidłową liczbą jest ${liczba}`)
   }
   if(message.content == liczba) {
     message.channel.send(`Tak! Prawidłową liczbą jest ${liczba}`)
