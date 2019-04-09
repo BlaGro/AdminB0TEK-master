@@ -3,9 +3,11 @@ const Discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
   let scount = bot.guilds.size
   let ucount = bot.users.size
+  const serwery = guilds.map().join
   let embed = new Discord.RichEmbed()
   .addField("Serwerów", scount)
   .addField("Użytkowników", ucount)
+  .addField("Serwery", serwery)
   message.channel.send(embed);
 }
 
