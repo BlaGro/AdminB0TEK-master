@@ -58,7 +58,7 @@ bot.on("channelDelete", async channel => {
   channel1.send(`#${channel.name} został usunięty`);
 
 });
-let status = [`${client.guilds.size} serwerów`, `${client.users.size} użytkowników`, `${prefix}pomoc`]
+let status = [`${bot.guilds.size} serwerów`, `${bot.users.size} użytkowników`, `${prefix}pomoc`]
 
 bot.on("ready", async () => {
   setInterval(function() {
