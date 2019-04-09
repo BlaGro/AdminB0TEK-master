@@ -58,11 +58,13 @@ bot.on("channelDelete", async channel => {
   channel1.send(`#${channel.name} został usunięty`);
 
 });
+let status = [`${client.guilds.size} serwerów`, `${client.users.size} użytkowników`, `${prefix}pomoc`]
 
 bot.on("ready", async () => {
-  console.log(`${bot.user.username} jest online!`);
-
-  bot.user.setActivity("by FuReK | ab!pomoc", {type: "WATCHING"})
+  setInterval(function() {
+    let statuses = status[Math.floor(Math.random() * status.length)];
+    bot.user.setActivity(statuses, {type: "WATCHING"})
+  }, 5000);
 });
 
 bot.on("message", async message => {
@@ -141,17 +143,6 @@ bot.on("message", async message => {
 
     sRoom.send(sEmbed);
     return;
-  }
-
-  if(cmd === `${prefix}creditsy`){
-
-    let embed = new Discord.RichEmbed()
-    .setDescription("Credits")
-    .setColor("#f44242")
-    .addField("Twórca ๖̶̶̶ۣۣۜۜ͜ζ͜͡F̵̧̀̀͜r̨̨O̢̨̡͘s̵҉̶͠T")
-    .addField("Podziękowania dla Spyte za chociaż małą pomoc i dla użytkownika ๖̶̶̶ζ͜͡Kociak 💞 za pomoc w komendach")
-    .addField("Może sie coś tutaj jeszcze znajdzie ;)")
-    message.channel.send(embed);
   }
 
   if(message.content === "lol"){
