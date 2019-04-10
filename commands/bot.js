@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
   .addField("Serwerów", scount)
   .addField("Użytkowników", ucount)
   message.channel.send(embed);
-  .then(updated => (msg) => {
+  then(updated => (msg) => {
     message.edit(embed);
   });
 }
