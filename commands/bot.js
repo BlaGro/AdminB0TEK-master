@@ -6,8 +6,7 @@ module.exports.run = async(bot, message, args) => {
   let embed = new Discord.RichEmbed()
   .addField("Serwerów", scount)
   .addField("Użytkowników", ucount)
-  message.channel.send(embed);
-  then(updated => (msg) => {
+  message.channel.send(embed).then(updated => (msg) => {
     message.edit(embed);
   });
 }
