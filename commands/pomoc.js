@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
   .addField("Bez prefixu", `Cześć\nxd\n...\njaki kozak\nlol\nlenny\naha\nty no nie wiem`)
   .addField(`Z prefixem: Hazard`, `ruletka\nmoneta`)
   .addField(`Z prefixem: Info`, `ikona-serwera\nawatar\nserwer\nping\nzapros\nuzytkownik\nbot\nserwery`)
-  .addField(`Z prefixem: 4FUN`, `ascii\n8ball\nliczba\nprzyszłosc\nbcb\nmoneta\npowiedz\nrzuc <nick> <powód>\nrozmowa\n!\nrak\nstopnie\nlosowaliczba\nsaper\nrandomkill`)
+  .addField(`Z prefixem: 4FUN`, `ascii\n8ball\nliczba\nprzyszłosc\nbcb\nmoneta\npowiedz\nrzuc <nick> <powód>\nrozmowa\n!\nrak\nstopnie\nlosowaliczba\nsaper`)
   .addField(`Z prefixem: RolePlay`, `akcja\nregeneracja\noswoj`)
   .addField(`Z prefixem: Administracyjne`, `clear\npoll`)
   .addField(`Z prefixem: Pomocne dla serwera`, `report(potrzebny kanał zgloszenia)\npropozycja(kanał propozycje potrzebny)`)
