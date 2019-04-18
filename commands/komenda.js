@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
 	let embed = new Discord.RichEmbed()
 	.setDescription('Lista serwerów')
 	.addField('A oto i lista', serwery)
-	message.channel.send(embd);
+	message.channel.send(embed);
 }
 
 module.exports.help = {
