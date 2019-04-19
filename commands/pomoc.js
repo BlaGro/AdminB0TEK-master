@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
   .setColor("#26ff0")
   .addField("Bez prefixu", `Cześć\nxd\n...\njaki kozak\nlol\nlenny\naha\nty no nie wiem`)
   .addField(`Z prefixem: Hazard`, `ruletka\nmoneta`)
-  .addField(`Z prefixem: Info`, `ikona-serwera\nawatar\nserwer\nping\nzapros\nuzytkownik\nbot\nserwery\ndata`)
+  .addField(`Z prefixem: Info`, `ikona-serwera\nawatar\nserwer\nping\nzapros\nuzytkownik\nbot\nserwery\ndat`)
   .addField(`Z prefixem: 4FUN`, `ascii\n8ball\nliczba\nprzyszłosc\nbcb\nmoneta\npowiedz\nrzuc <nick> <powód>\nrozmowa\n!\nrak\nstopnie\nlosowaliczba\nsaper`)
   .addField(`Z prefixem: RolePlay`, `akcja\nregeneracja\noswoj`)
   .addField(`Z prefixem: Administracyjne`, `clear\npoll`)
