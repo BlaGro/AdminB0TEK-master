@@ -30,15 +30,6 @@ bot.on("channelCreate", async channel => {
   let kanal = channel.guild.channels.find(`name`, "logs");
   kanal.send(`#${channel.name} został stworzony`);
 });
-
-bot.on("emojiCreate", async emoji => {
-
-  let kanal = channel.guild.channels.find(`name`, "logs")
-  let embed = new Discord.RichEmbed()
-  .setDescription(`Nowe emoji`)
-  .addField(`Dodano: ${emoji}`)
-  kanal.send(embed);
-});
 bot.on("guildMemberAdd", async member => {
 
   console.log(`${member} dolaczył na serwer`)
