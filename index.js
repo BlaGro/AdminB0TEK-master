@@ -30,6 +30,7 @@ bot.on("channelCreate", async channel => {
   let kanal = channel.guild.channels.find(`name`, "logs");
   kanal.send(`#${channel.name} został stworzony`);
 });
+
 bot.on("guildMemberAdd", async member => {
 
   console.log(`${member} dolaczył na serwer`)
