@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
 	var miesiac = data.getMonth()+1;
 	var rok = data.getFullYear();
 
-	var godzina data.getHours();
+	var godzina = data.getHours();
 	var minuta = data.getMinutes();
 	var sekunda = data.getSeconds();
 
