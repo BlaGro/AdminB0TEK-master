@@ -27,7 +27,7 @@ bot.on("channelCreate", async channel => {
 
   console.log(`${channel.name} został stworzony`);
 
-  let kanal = message.guild.channels.find(`name`, "logs");
+  let kanal = channel.guild.channels.find(`name`, "logs");
   kanal.send(`#${channel.name} został stworzony`);
 });
 
