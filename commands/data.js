@@ -13,15 +13,11 @@ module.exports.run = async(bot, message, args) => {
 
 	let embed = new Discord.RichEmbed()
 	.setDescription('Data')
-	.addField('Dzień', dzien)
-	.addField('Miesiąc', miesiac)
-	.addField('Rok', rok)
-	.addField('Godzina', godzina)
-	.addField('Minuta', minuta)
-	.addField('Sekunda', sekunda)
+	.addField('Data', `${dzien}-${miesiac}-${rok}`)
+	.addField('Godzina', `${godzina}:${minuta}:${sekunda}`)
 	message.channel.send(embed);
 }
 
 module.exports.help = {
-	name:"data"
+	name:"czas"
 }
